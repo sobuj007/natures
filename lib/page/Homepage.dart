@@ -63,53 +63,83 @@ class _HomepageState extends State<Homepage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: 40.w,
-                              child: TextField(
-                                decoration: InputDecoration(
-                                    hintText: "Search Product",
-                                    hintStyle: sheet.webmenu(),
-                                    contentPadding: EdgeInsets.symmetric(
-                                        vertical: 0.0, horizontal: 2.w),
-                                    suffixIcon: Container(
-                                        child: Icon(
-                                      Icons.search,
-                                      color: Colors.green,
-                                    )),
-                                    border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(5)),
-                                    focusedBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                            width: 1, color: col.themecolor)),
-                                    disabledBorder: OutlineInputBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(5))),
+                        Expanded(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: 40.w,
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                      hintText: "Search Product",
+                                      hintStyle: sheet.webmenu(),
+                                      contentPadding: EdgeInsets.symmetric(
+                                          vertical: 0.0, horizontal: 2.w),
+                                      suffixIcon: Container(
+                                          child: Icon(
+                                        Icons.search,
+                                        color: Colors.green,
+                                      )),
+                                      border: OutlineInputBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(5)),
+                                      focusedBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              width: 1, color: col.themecolor)),
+                                      disabledBorder: OutlineInputBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(5))),
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                        HoverWidget(
-                          child: Container(
-                            decoration: BoxDecoration(
-                                color: col.themecolor,
-                                borderRadius: BorderRadius.circular(8)),
-                            child: Padding(
-                              padding: const EdgeInsets.all(16.0),
-                              child: Text("Login / Signup"),
-                            ),
+                            ],
                           ),
                         ),
                         Container(
-                          decoration: BoxDecoration(
-                              color: col.themecolor,
-                              borderRadius: BorderRadius.circular(8)),
-                          child: Padding(
-                              padding: const EdgeInsets.all(16.0),
-                              child: Icon(Icons.shopping_cart)),
-                        ),
+                          width: 300,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              HoverButton(
+                                // animationDuration: Duration(seconds: 5),
+                                onpressed: () {},
+                                focusColor: col.themecolor,
+                                hoverColor: Color.fromARGB(14, 51, 51, 51),
+                                hoverTextColor: Colors.white,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(4.0),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                        color: col.themecolor,
+                                        borderRadius:
+                                            BorderRadius.circular(30)),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(14.0),
+                                      child: Text("Login / Signup"),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              HoverButton(
+                                onpressed: () {},
+                                focusColor: col.themecolor,
+                                hoverColor: Color.fromARGB(14, 51, 51, 51),
+                                hoverTextColor: Colors.white,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                        color: col.themecolor,
+                                        borderRadius:
+                                            BorderRadius.circular(40)),
+                                    child: Padding(
+                                        padding: const EdgeInsets.all(16.0),
+                                        child: Icon(Icons.shopping_cart)),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
                       ],
                     ),
                   ],
