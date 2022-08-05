@@ -95,7 +95,7 @@ class _HomepageState extends State<Homepage> {
                           ),
                         ),
                         Container(
-                          width: 300,
+                          width: 240,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -142,12 +142,39 @@ class _HomepageState extends State<Homepage> {
                         )
                       ],
                     ),
+                    // web adds
+                    Container(
+                      width: 100.w,
+                      height: 22.w,
+                      child: Image.asset(
+                        "assets/s.jpg",
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    //List flash data
+                    Container(
+                      width: 100.w,
+                      height: 22.w,
+                      child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemCount: 8,
+                          itemBuilder: (BuildContext context, int index) {
+                            return Container(
+                              child: Card(
+                                  child: Column(
+                                children: [
+                                  Image(image: AssetImage("assets/f.jpg"))
+                                ],
+                              )),
+                            );
+                          }),
+                    )
                   ],
                 ),
               ),
-            )
+            ),
           ],
-        )
+        ),
       ],
     );
   }
