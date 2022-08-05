@@ -160,11 +160,21 @@ class _HomepageState extends State<Homepage> {
                           itemCount: 8,
                           itemBuilder: (BuildContext context, int index) {
                             return Container(
+                              width: 22.w,
                               child: Card(
-                                  child: Column(
-                                children: [
-                                  Image(image: AssetImage("assets/f.jpg"))
-                                ],
+                                  child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  children: [
+                                    Container(
+                                        height: 20.h,
+                                        width: 100.h,
+                                        child: Image(
+                                          image: AssetImage("assets/f.jpg"),
+                                          fit: BoxFit.cover,
+                                        ))
+                                  ],
+                                ),
                               )),
                             );
                           }),
