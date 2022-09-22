@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:natures/page/Homepage.dart';
 import 'package:natures/page/SplashScreen.dart';
+import 'package:natures/page/demodata.dart';
 import 'package:natures/page/style.dart';
 import 'package:natures/xtra/Color.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 Style sheet = new Style();
 ColorData col = new ColorData();
+Datas data = new Datas();
 void main() {
   runApp(const MyApp());
 }

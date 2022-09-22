@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hovering/hovering.dart';
 import 'package:natures/main.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -25,7 +26,7 @@ class _WebHeaderState extends State<WebHeader> {
                 height: 9.0.w,
                 child: Image(
                   height: 7.0.w,
-                  image: AssetImage('assets/logo.png'),
+                  image: AssetImage('assets/product/logo.png'),
                   fit: BoxFit.contain,
                 )),
             Container(
@@ -41,13 +42,45 @@ class _WebHeaderState extends State<WebHeader> {
                       style: sheet.webmenu(),
                     ),
                   ),
+
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      "Category",
+                      "Category :",
                       style: sheet.webmenu(),
                     ),
                   ),
+                  Container(
+                    height: 20.h,
+                    child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ListView.builder(
+                            itemCount: data.catimg.length,
+                            itemBuilder: (BuildContext context, int i) {
+                              return HoverWidget(
+                                onHover: (event) {},
+                                child: Padding(
+                                  padding: const EdgeInsets.all(12.0),
+                                  child: Text(
+                                    data.list[i].toString(),
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ),
+                                hoverChild: Padding(
+                                  padding: const EdgeInsets.all(12.0),
+                                  child: Text(
+                                    data.list[i].toString(),
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ),
+                              );
+                            })),
+                  ),
+
                   // Text(
                   //   "Login",
                   //   style: sheet.webmenu(),

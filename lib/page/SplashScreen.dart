@@ -13,7 +13,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   starttime() {
-    Future.delayed(Duration(seconds: 3)).then((value) => {
+    Future.delayed(Duration(seconds: 2)).then((value) => {
           Navigator.pushAndRemoveUntil(context,
               CupertinoPageRoute(builder: (_) => Homepage()), (route) => false)
         });
@@ -35,6 +35,13 @@ class _SplashScreenState extends State<SplashScreen> {
               width: 60.w,
               height: 20.h,
               child: Image(image: AssetImage("assets/logo.png"))),
+        ),
+      ),
+      bottomNavigationBar: Container(
+        width: 100.w,
+        child: Text(
+          "Team X",
+          style: TextStyle(fontSize: 20, color: Colors.grey.shade400),
         ),
       ),
     );

@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   responsive_sizer: ^3.1.0
   hovering: ^1.0.4
+  flutter_staggered_animations: ^1.0.0
 
 
 dev_dependencies:
@@ -66,6 +67,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/
+    - assets/product/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
